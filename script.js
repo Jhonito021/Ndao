@@ -73,17 +73,6 @@ const conversations = [
         ]
     },
     {
-        id: 3, name: "Lea", image: "https://i.pravatar.cc/150?img=32", time: "Hier", unread: 1,
-        messages: [
-            { text: "Bonjour ! Tu fais quoi comme sport ?", sent: false },
-            { text: "Du yoga et de la course a pied", sent: true },
-            { text: "J'adore le yoga aussi ! Tu vas dans quel studio ?", sent: false },
-            { text: "Celui du centre-ville, tu connais ?", sent: true },
-            { text: "Oui ! On pourrait y aller ensemble", sent: false },
-            { text: "A bientot !", sent: false }
-        ]
-    },
-    {
         id: 4, name: "Camille", image: "https://i.pravatar.cc/150?img=48", time: "Hier", unread: 0,
         messages: [
             { text: "Salut ! Tu lis quoi en ce moment ?", sent: false },
