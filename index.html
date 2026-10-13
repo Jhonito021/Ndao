@@ -1,24 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essai</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: #000;
-        }
-    </style>
+    <title>Ndao - Trouvez votre ame soeur</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <h1>Bonjour, Ceci est un essai</h1>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-heart logo-icon"></i>
+            <span class="logo-text">Ndao</span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-link active" data-page="discover">
+                <i class="fa-solid fa-fire"></i> Decouvrir
+            </a>
+            <a href="#" class="nav-link" data-page="matches">
+                <i class="fa-solid fa-heart"></i> Matchs
+            </a>
+            <a href="#" class="nav-link" data-page="messages">
+                <i class="fa-solid fa-comment"></i> Messages
+            </a>
+            <a href="#" class="nav-link" data-page="profile">
+                <i class="fa-solid fa-user"></i> Profil
+            </a>
+        </nav>
+        <div class="user-menu">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Avatar" class="avatar">
+        </div>
+    </header>
+
+    <!-- ===== PAGE DECOUVRIR ===== -->
+    <main class="container">
+        <section id="page-discover" class="page active">
+            <h1 class="page-title">Decouvrez des profils</h1>
+            
+            <div class="card-stack" id="cardStack"></div>
+
+            <div class="actions">
+                <button class="btn-action btn-pass" id="btnPass" title="Passer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="btn-action btn-super" id="btnSuper" title="Super Like">
+                    <i class="fa-solid fa-star"></i>
+                </button>
+                <button class="btn-action btn-like" id="btnLike" title="Aimer">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== PAGE MATCHS ===== -->
+        <section id="page-matches" class="page">
+            <h1 class="page-title">Vos Matchs</h1>
+            <div class="matches-grid" id="matchesGrid"></div>
+        </section>
+
+        <!-- ===== PAGE MESSAGES ===== -->
+        <section id="page-messages" class="page">
+            <h1 class="page-title">Messages</h1>
+            <div class="messages-layout">
+                <aside class="conversations" id="conversationsList"></aside>
+                <div class="chat" id="chatBox">
+                    <div class="chat-empty">
+                        <i class="fa-solid fa-comments"></i>
+                        <p>Selectionnez une conversation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE PROFIL ===== -->
+        <section id="page-profile" class="page">
+            <h1 class="page-title">Mon Profil</h1>
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://i.pravatar.cc/200?img=12" alt="Mon avatar" class="profile-avatar">
+                    <div>
+                        <h2>Alex, 28</h2>
+                        <p class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Paris, France
+                        </p>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <h3>A propos</h3>
+                    <p>Passionne de voyages, de photographie et de cuisine. A la recherche de quelqu'un pour partager de belles aventures.</p>
+                </div>
+                <div class="profile-section">
+                    <h3>Centres d'interet</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fa-solid fa-music"></i> Musique</span>
+                        <span class="tag"><i class="fa-solid fa-plane"></i> Voyage</span>
+                        <span class="tag"><i class="fa-solid fa-camera"></i> Photographie</span>
+                        <span class="tag"><i class="fa-solid fa-utensils"></i> Cuisine</span>
+                        <span class="tag"><i class="fa-solid fa-dumbbell"></i> Sport</span>
+                        <span class="tag"><i class="fa-solid fa-book"></i> Lecture</span>
+                    </div>
+                </div>
+                <button class="btn-primary">
+                    <i class="fa-solid fa-pen"></i> Modifier le profil
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
